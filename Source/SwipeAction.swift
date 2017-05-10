@@ -100,7 +100,7 @@ public class SwipeAction: NSObject {
     
     // MARK: - Internal
     
-    internal var completionHandler: ((ExpansionFulfillmentStyle) -> Void)?
+    var completionHandler: ((ExpansionFulfillmentStyle) -> Void)?
 }
 
 /// Describes how expansion should be resolved once the action has been fulfilled.
@@ -114,7 +114,7 @@ public enum ExpansionFulfillmentStyle {
 
 // MARK: - Internal
 
-internal extension SwipeAction {
+extension SwipeAction {
     var hasBackgroundColor: Bool {
         return backgroundColor != .clear && backgroundEffect == nil
     }
